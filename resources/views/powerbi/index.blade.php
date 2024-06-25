@@ -22,7 +22,7 @@
                 </p>
             </div>
         </section>
-        <section id="report-container" class="embed-container col-lg-offset-4 col-lg-7 col-md-offset-5 col-md-7 col-sm-offset-5 col-sm-7 mt-5">
+        <section id="report-container" class="embed-container">
         </section>
 
         <section class="error-container m-5"></section>
@@ -61,12 +61,20 @@
                 };
 
                 let reportLoadConfig = {
-                    type: "report",
-                    tokenType: models.TokenType.Embed,
-                    accessToken: "{{ $accessToken }}",
-                    embedUrl: "{{ $embedUrl }}",
-                    filters: [filter,filter2]
-                };
+                        type: "report",
+                        tokenType: models.TokenType.Embed,
+                        accessToken: "<?php echo $accessToken; ?>",
+                        embedUrl: "<?php echo $embedUrl; ?>",
+                        filters: [filter,filter2],
+                        settings: {
+                                    panes: {
+                                        filters: {
+                                            expanded: false,
+                                            visible: false
+                                        }
+                                    }
+                                }
+                    };
 
                 let tokenExpiry = "{{ $expiry }}";
 
