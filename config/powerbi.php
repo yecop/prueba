@@ -10,6 +10,6 @@ return [
     'reportId' => 'b2772109-8d4a-4204-9a38-149951aba56f',
     'pbiUsername' => '',
     'pbiPassword' => '',
-    'clientSecret' => 'lmj8Q~Ov_mkoS5.iSMWhwjZCrOmECVyGHlzIWbAE',
+    'clientSecret' => '',
     'tenantId' => '62dc2893-d525-4a23-a8a3-c6508172b432',
 ];
